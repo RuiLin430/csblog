@@ -1,21 +1,31 @@
 {
-  "name": "valaxy-blog",
-  "type": "module",
-  "version": "0.0.0",
+  "name": "bigcake-blog",
+  "version": "0.11.1",
   "private": true,
   "scripts": {
-    "build": "npm run build:ssg",
+    "build": "valaxy fuse && yarn build:ssg",
     "build:spa": "valaxy build",
     "build:ssg": "valaxy build --ssg",
     "dev": "valaxy",
+    "new": "valaxy new",
     "rss": "valaxy rss",
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "0.18.7",
-    "valaxy-theme-yun": "0.18.7"
+    "@iconify-json/fluent": "^1.1.54",
+    "ansi-regex": "5.0.1",
+    "artalk": "^2.8.7",
+    "axios": "^1.6.8",
+    "valaxy": "^0.18.7",
+    "valaxy-addon-components": "^0.0.2",
+    "valaxy-addon-lightgallery": "^0.0.2",
+    "valaxy-addon-meting": "^0.1.2",
+    "valaxy-theme-yun": "^0.18.7"
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "esbuild-wasm": "^0.21.3"
+  },
+  "overrides": {
+    "esbuild": "npm:esbuild-wasm@latest"
   }
 }
